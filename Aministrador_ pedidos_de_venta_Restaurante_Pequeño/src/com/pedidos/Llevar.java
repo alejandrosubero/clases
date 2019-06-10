@@ -1,4 +1,4 @@
-package com.Administrador.Pedidos.Restaurante.Pequeño;
+package com.pedidos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -37,7 +37,15 @@ public class Llevar extends Pedido {
 	
 	public String agregarComida (String unaComida, double unMonto){// este codigo agrega una comida para llevar
 		
-		Scanner sc3 =new Scanner (System.in);//inicializa el escaner
+		totalllevar = this.getTotal()+unMonto;
+		orden1 = this.getOrden()+unaComida;
+		
+		this.setOrden(orden1);
+		
+		return this.getOrden();
+		
+			
+		/*Scanner sc3 =new Scanner (System.in);//inicializa el escaner
 		
 		boolean flag =true;
 		
@@ -123,7 +131,7 @@ public class Llevar extends Pedido {
 	
 		this.setTotal(getTotal()+totalllevar);
 		this.setOrden(orden1+this.getOrden());
-		return this.getOrden();
+		return this.getOrden();*/
    }
 	
 	@Override
@@ -142,8 +150,6 @@ public class Llevar extends Pedido {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	
 	
 }
 

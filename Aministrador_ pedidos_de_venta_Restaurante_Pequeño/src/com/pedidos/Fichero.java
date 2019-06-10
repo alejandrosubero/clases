@@ -1,4 +1,4 @@
-package com.Administrador.Pedidos.Restaurante.Pequeño;
+package com.pedidos;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -33,18 +33,18 @@ public class Fichero extends Pedido {
 	public void creacionDeNuevoFichero (String unstring) {// genera un nuevo fichero para guardar la orden
 		
 	       
-		String generador= unstring;  //= String.valueOf();           //String.valueOf((int)Math.round(Math.random()*1000000)); //generador de numero a la zar
+		//String generador= unstring;  //= String.valueOf();           //String.valueOf((int)Math.round(Math.random()*1000000)); //generador de numero a la zar
 		
 //==========================================================================================================================
 		
 		   //Date fecha = new Date(); //genera fecha completa
 		  Date date = Calendar.getInstance().getTime();  
-          DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh.mm.ss");  
+          DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");  
           String strDate = dateFormat.format(date);  
-         // System.out.println(strDate);
+         System.out.println(strDate);
 		
 //============================================================================================================================		
-          direccion = "C:\\Users\\Public\\"+"\\"+generador+"_"+strDate+".txt";
+          //direccion = "C:\\Users\\Public\\"+"\\"+generador+"_"+strDate+".txt";
           
          // System.out.println(direccion);
 		

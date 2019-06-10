@@ -1,4 +1,4 @@
-package com.Administrador.Pedidos.Restaurante.Pequeño;
+package com.pedidos;
 
 public class Local extends Pedido {
 
@@ -24,7 +24,7 @@ public class Local extends Pedido {
 	
 	private void initialization2 () { //inicializa variables.
 		
-		tipoOrden=" Para llevar";
+		tipoOrden=" Para comer en el local";
 		
 	}
 

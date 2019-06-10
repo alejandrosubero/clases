@@ -1,4 +1,4 @@
-package com.Administrador.Pedidos.Restaurante.Pequeño;
+package com.pedidos;
 
 import java.io.IOException;
 
@@ -42,7 +42,7 @@ public class Main {
 	    //f.leerEnCosina();
 		
 		//f.ficherosclear();
-		
+		f.creacionDeNuevoFichero("cdcd");
 	
 		
         

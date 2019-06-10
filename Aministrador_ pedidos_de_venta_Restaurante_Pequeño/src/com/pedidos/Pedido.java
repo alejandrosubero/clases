@@ -1,8 +1,9 @@
-package com.Administrador.Pedidos.Restaurante.Pequeño;
+package com.pedidos;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class Pedido {
 
@@ -166,7 +167,6 @@ public class Pedido {
 				
 				System.out.println("Orden cancelada");
 				pago =false;
-				
 			}
 			
 		}else {
@@ -175,61 +175,18 @@ public class Pedido {
 		}
 		
 		return pago;
-		
 	}
+	
+	
 	
 	public String agregarComida (String unaComida, double unMonto){// metodo para generar la orden de comida ya solicitada
 		
-		Scanner sc2 =new Scanner (System.in);
-		boolean flag =true;
-		ArrayList <String> M = new ArrayList <String> ();
-				
-		do {
-		
-			System.out.println(" Escriba la orden del cliente que desa agregar : "+" combo1, combo2, combo3, soda");
-			
-			String slc2 = sc2.nextLine();
-			
-			if (slc2.equals("combo1")) {
-				
-			double	price = 50.00;
-			total+= price;
-			M.add("Combo 1"+" = "+price+" ");
-				
-			}else if (slc2.equals("combo2")) {
-				
-				double	price = 59.00;
-				total+= price;
-				M.add("Combo 2"+" = "+price+" ");
-				
-			}else if (slc2.equals("combo3")) {
-				
-				double	price = 60.00;
-				total+= price;
-				M.add("Combo 3"+" = "+price+" ");
-			
-			}else if (slc2.equals("soda")) {
-				
-				double	price = 35.50;
-				total+= price;
-				M.add("Soda"+" = "+price+" ");
-			
-			}else{
-				
-				flag=false;
-			}
-			
-		}while (flag);
-		
-		for (int i=0; i< M.size();i++) {
-			
-		orden+= M.get(i);
-			
-		}
-		
-		return orden;
-		
+		orden+=unaComida;
+		total+=unMonto;
+	
+		return orden;	
 	}
+	
 	
 	@Override
 	public String toString() {// metodo toString de la clase pedido
@@ -255,12 +212,7 @@ public class Pedido {
 			
 			LL.agregarComida(orden,LL.getPrice());
 			
-						
-		}
-		
-		
-		
-		
+		}	
 	}
 	
 	
